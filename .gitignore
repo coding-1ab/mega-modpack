@@ -2,3 +2,9 @@ build
 .idea
 .gradle
 run
+*/build
+*/.gradle
+*/run
+*/**/build
+*/**/.gradle
+*/**/run
