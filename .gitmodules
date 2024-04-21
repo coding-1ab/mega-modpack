@@ -64,3 +64,27 @@
 [submodule "Moonlight"]
 	path = Moonlight
 	url = https://github.com/MehVahdJukaar/Moonlight.git
+[submodule "betteranimationscollection"]
+	path = betteranimationscollection
+	url = https://github.com/Fuzss/betteranimationscollection.git
+[submodule "blockrunner"]
+	path = blockrunner
+	url = https://github.com/Fuzss/blockrunner.git
+[submodule "cutthrough"]
+	path = cutthrough
+	url = https://github.com/Fuzss/cutthrough.git
+[submodule "easymagic"]
+	path = easymagic
+	url = https://github.com/Fuzss/easymagic.git
+[submodule "easyanvils"]
+	path = easyanvils
+	url = https://github.com/Fuzss/easyanvils.git
+[submodule "leavesbegone"]
+	path = leavesbegone
+	url = https://github.com/Fuzss/leavesbegone.git
+[submodule "pickupnotifier"]
+	path = pickupnotifier
+	url = https://github.com/Fuzss/pickupnotifier.git
+[submodule "visualworkbench"]
+	path = visualworkbench
+	url = https://github.com/Fuzss/visualworkbench.git
