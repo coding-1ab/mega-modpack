@@ -1,0 +1,66 @@
+[submodule "CC-Tweaked"]
+	path = CC-Tweaked
+	url = https://github.com/cc-tweaked/CC-Tweaked.git
+[submodule "morered"]
+	path = morered
+	url = https://github.com/Commoble/morered.git
+[submodule "effectdescriptions"]
+	path = effectdescriptions
+	url = https://github.com/Fuzss/effectdescriptions.git
+[submodule "radium-upstream"]
+	path = radium-upstream
+	url = https://github.com/Reforged-Hub/radium-upstream.git
+[submodule "CreateEnchantmentIndustry"]
+	path = CreateEnchantmentIndustry
+	url = https://github.com/DragonsPlusMinecraft/CreateEnchantmentIndustry.git
+[submodule "alternate-current"]
+	path = alternate-current
+	url = https://github.com/SpaceWalkerRS/alternate-current.git
+[submodule "cccbridge"]
+	path = cccbridge
+	url = https://github.com/tweaked-programs/cccbridge.git
+[submodule "InfinityButtons"]
+	path = InfinityButtons
+	url = https://github.com/TeamDiopside/InfinityButtons.git
+[submodule "SuggestionProviderFix"]
+	path = SuggestionProviderFix
+	url = https://github.com/Harleyoc1/SuggestionProviderFix.git
+[submodule "Catalogue"]
+	path = Catalogue
+	url = https://github.com/MrCrayfish/Catalogue.git
+[submodule "rrls"]
+	path = rrls
+	url = https://github.com/dima-dencep/rrls.git
+[submodule "Candlelight"]
+	path = Candlelight
+	url = https://github.com/satisfyu/Candlelight.git
+[submodule "searchables"]
+	path = searchables
+	url = https://github.com/jaredlll08/searchables.git
+[submodule "SmarterFarmers"]
+	path = SmarterFarmers
+	url = https://github.com/MehVahdJukaar/SmarterFarmers.git
+[submodule "Piglin-Proliferation"]
+	path = Piglin-Proliferation
+	url = https://github.com/seymourimadeit/Piglin-Proliferation.git
+[submodule "Meadow"]
+	path = Meadow
+	url = https://github.com/satisfyu/Meadow.git
+[submodule "GetItTogetherDrops"]
+	path = GetItTogetherDrops
+	url = https://github.com/bl4ckscor3/GetItTogetherDrops.git
+[submodule "AI-Improvements"]
+	path = AI-Improvements
+	url = https://github.com/BuiltBrokenModding/AI-Improvements.git
+[submodule "Curios"]
+	path = Curios
+	url = https://github.com/TheIllusiveC4/Curios.git
+[submodule "FastPaintings"]
+	path = FastPaintings
+	url = https://github.com/MehVahdJukaar/FastPaintings.git
+[submodule "ImmediatelyFast"]
+	path = ImmediatelyFast
+	url = https://github.com/RaphiMC/ImmediatelyFast.git
+[submodule "Moonlight"]
+	path = Moonlight
+	url = https://github.com/MehVahdJukaar/Moonlight.git
