@@ -22,7 +22,7 @@ val parchment_version: String by project
 val forge_version: String by project
 val mod_authors: String by project
 val pack_format_number: String by project
-val mappings_channel: String by project
+val mapping_channel: String by project
 
 repositories {
     mavenLocal()
@@ -41,7 +41,7 @@ java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 // Default run configurations.
 // These can be tweaked, removed, or duplicated as needed.
 minecraft {
-    mappings(mappings_channel, "$parchment_version-$minecraft_version")
+    mappings(mapping_channel, "$parchment_version-$minecraft_version")
 
     runs {
         // applies to all the run configs below
