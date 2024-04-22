@@ -3,8 +3,8 @@ plugins {
     eclipse
     idea
     `maven-publish`
-    id("net.minecraftforge.gradle") version project.properties["forgegradle_version"]!!
-    id("org.parchmentmc.librarian.forgegradle") version project.properties["librarian_version"]!!
+    id("net.minecraftforge.gradle") version "6.0.22"
+    id("org.parchmentmc.librarian.forgegradle") version "1.+"
 }
 
 version = project.properties["mod_version"]!!

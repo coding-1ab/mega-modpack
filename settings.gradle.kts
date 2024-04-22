@@ -11,7 +11,6 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
-
 includeBuild("AI-Improvements")
 includeBuild("AdvancedPeripherals")
 includeBuild("AppleSkin")
@@ -80,7 +79,7 @@ includeBuild("pickupnotifier/pickupnotifier")
 includeBuild("radium-upstream")
 includeBuild("right-click-harvest")
 includeBuild("rrls")
-includeBuild("rubidium-extra")
+// includeBuild("rubidium-extra")
 includeBuild("searchables")
 includeBuild("spark")
 includeBuild("spyglass-improvements")
