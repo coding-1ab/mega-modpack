@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
 

@@ -1,9 +1,12 @@
+rootProject.name = "coding-lab-mega-modpack"
+
 pluginManagement {
     repositories {
         mavenLocal()
         gradlePluginPortal()
         maven("https://maven.minecraftforge.net/")
         maven("https://maven.parchmentmc.org")
+        maven("https://repo.spongepowered.org/repository/maven-public/")
     }
 }
 
@@ -11,15 +14,19 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
-includeBuild("AI-Improvements")
-includeBuild("AdvancedPeripherals")
-// includeBuild("AppleSkin")
-// includeBuild("Bakery")
-// includeBuild("Balm")
-// includeBuild("Better-Burning")
-// includeBuild("BetterAdvancements")
-// includeBuild("Big-Brain")
-// includeBuild("BoatItemView")
+//includeBuild("AI-Improvements")
+//includeBuild("AdvancedPeripherals")
+//includeBuild("AppleSkin")
+//includeBuild("Bakery") {
+//    dependencySubstitution {
+//        substitute(module("satisfy:letsdo-bakery-forge")).using(project(":forge"))
+//    }
+//}
+//includeBuild("Balm")
+//includeBuild("Better-Burning")
+//includeBuild("BetterAdvancements")
+includeBuild("Big-Brain")
+//includeBuild("BoatItemView")
 // includeBuild("CC-Tweaked")
 // includeBuild("Candlelight")
 // includeBuild("Catalogue")
@@ -31,7 +38,11 @@ includeBuild("AdvancedPeripherals")
 // includeBuild("CreateInteriorsMod")
 // includeBuild("Curios")
 // includeBuild("Ding")
-// includeBuild("DoAPI")
+//includeBuild("DoAPI") {
+//    dependencySubstitution {
+//        substitute(module("de.cristelknight:doapi")).using(project(":forge"))
+//    }
+//}
 // includeBuild("DurabilityTooltip")
 // includeBuild("DynamicLightsReforged")
 // includeBuild("EmbeddiumPlus")
@@ -48,6 +59,7 @@ includeBuild("AdvancedPeripherals")
 // includeBuild("KryptonReforged")
 // includeBuild("Meadow")
 // includeBuild("MemoryLeakFix")
+includeBuild("MixinTransmogrifier")
 // includeBuild("ModernFix")
 // includeBuild("Moonlight")
 // includeBuild("MouseTweaks")
@@ -64,6 +76,11 @@ includeBuild("AdvancedPeripherals")
 // includeBuild("TerraBlender")
 // includeBuild("WoodGood")
 // includeBuild("alternate-current")
+//includeBuild("architectury-api") {
+//    dependencySubstitution {
+//        substitute(module("dev.architectury:architectury-forge")).using(project(":forge"))
+//    }
+//}
 // includeBuild("betteranimationscollection/betteranimationscollection")
 // includeBuild("blockrunner/blockrunner")
 // includeBuild("cccbridge/forge")

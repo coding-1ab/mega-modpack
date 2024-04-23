@@ -91,3 +91,9 @@
 [submodule "SuperMartijn642sCoreLib"]
 	path = SuperMartijn642sCoreLib
 	url = https://github.com/SuperMartijn642/SuperMartijn642sCoreLib.git
+[submodule "architectury-api"]
+	path = architectury-api
+	url = https://github.com/architectury/architectury-api.git
+[submodule "MixinTransmogrifier"]
+	path = MixinTransmogrifier
+	url = https://github.com/Sinytra/MixinTransmogrifier.git

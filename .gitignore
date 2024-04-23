@@ -1,10 +1,13 @@
 build
 .idea
 .gradle
+out
 run
 */build
 */.gradle
 */run
+*/out
 */**/build
 */**/.gradle
 */**/run
+*/**/out

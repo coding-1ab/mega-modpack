@@ -1,3 +1,5 @@
+import org.gradle.api.internal.artifacts.dependencies.DefaultExternalModuleDependency
+
 plugins {
     `java-library`
     eclipse
@@ -5,6 +7,7 @@ plugins {
     `maven-publish`
     id("net.minecraftforge.gradle") version "[6.0.16,6.2)"
     id("org.parchmentmc.librarian.forgegradle") version "1.+"
+    id("org.spongepowered.mixin") version "0.7.+"
 }
 
 version = project.properties["mod_version"]!!
@@ -97,115 +100,116 @@ sourceSets.main.configure {
     resources.srcDirs("src/generated/resources/")
 }
 
+repositories {
+    mavenLocal()
+    maven {
+        url = uri("https://maven.twelveiterations.com/repository/maven-public/")
+        content {
+            includeGroup("net.blay09.mods")
+        }
+    }
+    exclusiveContent {
+        forRepository {
+            maven {
+                url = uri("https://cursemaven.com")
+            }
+        }
+        filter {
+            includeGroup("curse.maven")
+        }
+    }
+}
+
+fun DependencyHandler.mod(dependency: String) {
+    implementation(fg.deobf(dependency, closureOf<DefaultExternalModuleDependency> {
+        isTransitive = false
+    }))
+}
+
 dependencies {
-    // Specify the version of Minecraft to use.
-    // Depending on the plugin applied there are several options. We will assume you applied the userdev plugin as shown above.
-    // The group for userdev is net.neoforged, the module name is neoforge, and the version is the same as the neoforge version.
-    // You can however also use the vanilla plugin (net.neoforged.gradle.vanilla) to use a version of Minecraft without the neoforge loader.
-    // And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.
-    // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
     minecraft("net.minecraftforge:forge:${forge_version}")
+    //mod("com.builtbroken.aiimprovements:AI-Improvements")
+    //mod("de.srendi.advancedperipherals:AdvancedPeripherals")
+    //mod("squeek.appleskin:AppleSkin")
+    //mod("satisfy:letsdo-bakery-forge")
+    //mod("net.blay09.mods:Balm")
+    //mod("net.darkhax.betterburning:BetterBurning")
+    //mod("curse.maven:betterburning-353434:4714733")
+    //mod("betteradvancements:BetterAdvancements")
+        mod("tallestegg.bigbrain:Big-Brain:1.20-1.7.3")
+    //mod("me.soapsuds.boatiview:BoatItemView")
+    // mod(":CC-Tweaked")
+    // mod(":Candlelight")
+    // mod(":Catalogue")
+    // mod(":Clumps")
+    // mod(":Controlling")
+    // mod(":CrashUtilities")
+    // mod(":Create")
 
-    implementation("com.builtbroken.aiimprovements:AI-Improvements")
-    implementation("de.srendi.advancedperipherals:AdvancedPeripherals")
-    /*
-    implementation(":AppleSkin")
-    implementation(":Bakery")
-    implementation(":Balm")
-    implementation(":Better-Burning")
-    implementation(":BetterAdvancements")
-    implementation(":Big-Brain")
-    implementation(":BoatItemView")
-    implementation(":CC-Tweaked")
-    implementation(":Candlelight")
-    implementation(":Catalogue")
-    implementation(":Clumps")
-    implementation(":Controlling")
-    implementation(":CrashUtilities")
-    implementation(":Create")
-    implementation(":CreateEnchantmentIndustry")
-    implementation(":CreateInteriorsMod")
-    implementation(":Curios")
-    implementation(":Ding")
-    implementation(":DoAPI")
-    implementation(":DurabilityTooltip")
-    implementation(":DynamicLightsReforged")
-    implementation(":EmbeddiumPlus")
-    implementation(":Enchantment-Descriptions")
-    implementation(":FarmersDelight")
-    implementation(":FastPaintings")
-    implementation(":Fastload")
-    implementation(":FerriteCore")
-    implementation(":Fusion")
-    implementation(":GameMenuModOption")
-    implementation(":GetItTogetherDrops")
-    implementation(":ImmediatelyFast")
-    implementation(":InfinityButtons")
-    implementation(":JustEnoughBreeding")
-    implementation(":JustEnoughItems")
-    implementation(":KotlinForForge")
-    implementation(":KryptonReforged")
-    implementation(":Meadow")
-    implementation(":MemoryLeakFix")
-    implementation(":ModernFix")
-    implementation(":MouseTweaks")
-    implementation(":NetherPortalFix")
-    implementation(":Oceans_Delight")
-    implementation(":Oculus")
-    implementation(":Patchouli")
-    implementation(":Piglin-Proliferation")
-    implementation(":Railway")
-    implementation(":Rechiseled")
-    implementation(":RechiseledCreate")
-    implementation(":SmarterFarmers")
-    implementation(":SuggestionProviderFix")
-    implementation(":TerraBlender")
-    implementation(":WoodGood")
-    implementation(":alternate-current")
-    implementation(":betteranimationscollection/betteranimationscollection")
-    implementation(":blockrunner/blockrunner")
-    implementation(":cccbridge")
-    implementation(":cloth-config")
-    implementation(":cutthrough")
-    implementation(":easyanvils/easyanvils")
-    implementation(":easymagic/easymagic")
-    implementation(":effectdescriptions")
-    implementation(":embeddium")
-    implementation(":leavesbegone/leavesbegone")
-    implementation(":mapatlases-neoforge")
-    implementation(":morered")
-    implementation(":pickupnotifier/pickupnotifier")
-    implementation(":radium-upstream")
-    implementation(":right-click-harvest")
-    implementation(":rrls")
-    implementation(":rubidium-extra")
-    implementation(":searchables")
-    implementation(":spark")
-    implementation(":spyglass-improvements")
-    implementation(":textrues-embeddium-options")
-    implementation(":toofast")
-    implementation(":visualworkbench/visualworkbench")*/
-
-    // Example mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-forge-api:${jei_version}"
-    // runtimeOnly "mezz.jei:jei-${mc_version}-forge:${jei_version}"
-
-    // Example mod dependency using a mod jar from ./libs with a flat dir repository
-    // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
-    // The group id is ignored when searching -- in this case, it is "blank"
-    // implementation "blank:coolmod-${mc_version}:${coolmod_version}"
-
-    // Example mod dependency using a file as dependency
-    // implementation files("libs/coolmod-${mc_version}-${coolmod_version}.jar")
-
-    // Example project dependency using a sister or child project:
-    // implementation project(":myproject")
-
-    // For more info:
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
+    // implementation(":CreateEnchantmentIndustry")
+    // implementation(":CreateInteriorsMod")
+    // implementation(":Curios")
+    // implementation(":Ding")
+    //mod("de.cristelknight:doapi")
+    // implementation(":DurabilityTooltip")
+    // implementation(":DynamicLightsReforged")
+    // implementation(":EmbeddiumPlus")
+    // implementation(":Enchantment-Descriptions")
+    // implementation(":FarmersDelight")
+    // implementation(":FastPaintings")
+    // implementation(":Fastload")
+    // implementation(":FerriteCore")
+    // implementation(":Fusion")
+    // implementation(":GameMenuModOption")
+    // implementation(":GetItTogetherDrops")
+    // implementation(":ImmediatelyFast")
+    // implementation(":InfinityButtons")
+    // implementation(":JustEnoughBreeding")
+    // implementation(":JustEnoughItems")
+    // implementation(":KotlinForForge")
+    // implementation(":KryptonReforged")
+    // implementation(":Meadow")
+    // implementation(":MemoryLeakFix")
+    mod("io.github.steelwoolmc:mixin-transmogrifier")
+    // implementation(":ModernFix")
+    // implementation(":MouseTweaks")
+    // implementation(":NetherPortalFix")
+    // implementation(":Oceans_Delight")
+    // implementation(":Oculus")
+    // implementation(":Patchouli")
+    // implementation(":Piglin-Proliferation")
+    // implementation(":Railway")
+    // implementation(":Rechiseled")
+    // implementation(":RechiseledCreate")
+    // implementation(":SmarterFarmers")
+    // implementation(":SuggestionProviderFix")
+    // implementation(":TerraBlender")
+    // implementation(":WoodGood")
+    // implementation(":alternate-current")
+    //mod("dev.architectury:architectury-forge:9.2.9999")
+    // implementation(":betteranimationscollection/betteranimationscollection")
+    // implementation(":blockrunner/blockrunner")
+    // implementation(":cccbridge")
+    // implementation(":cloth-config")
+    // implementation(":cutthrough")
+    // implementation(":easyanvils/easyanvils")
+    // implementation(":easymagic/easymagic")
+    // implementation(":effectdescriptions")
+    // implementation(":embeddium")
+    // implementation(":leavesbegone/leavesbegone")
+    // implementation(":mapatlases-neoforge")
+    // implementation(":morered")
+    // implementation(":pickupnotifier/pickupnotifier")
+    // implementation(":radium-upstream")
+    // implementation(":right-click-harvest")
+    // implementation(":rrls")
+    // implementation(":rubidium-extra")
+    // implementation(":searchables")
+    // implementation(":spark")
+    // implementation(":spyglass-improvements")
+    // implementation(":textrues-embeddium-options")
+    // implementation(":toofast")
+    // implementation(":visualworkbench/visualworkbench")
 }
 
 eclipse {
@@ -241,6 +245,10 @@ tasks {
         filesMatching(listOf("META-INF/mods.toml", "pack.mcmeta")) {
             expand(replacements + ("project" to project))
         }
+    }
+
+    named("build") {
+        dependsOn(*gradle.includedBuilds.map { build -> build.task(":build") }.toTypedArray())
     }
 
     withType<JavaCompile>().configureEach {
