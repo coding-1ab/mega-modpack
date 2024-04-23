@@ -3,7 +3,7 @@ plugins {
     eclipse
     idea
     `maven-publish`
-    id("net.minecraftforge.gradle") version "6.0.22"
+    id("net.minecraftforge.gradle") version "[6.0.16,6.2)"
     id("org.parchmentmc.librarian.forgegradle") version "1.+"
 }
 
@@ -23,6 +23,7 @@ val forge_version: String by project
 val mod_authors: String by project
 val pack_format_number: String by project
 val mapping_channel: String by project
+val mapping_version: String by project
 
 repositories {
     mavenLocal()
@@ -41,7 +42,7 @@ java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 // Default run configurations.
 // These can be tweaked, removed, or duplicated as needed.
 minecraft {
-    mappings(mapping_channel, "$parchment_version-$minecraft_version")
+    mappings(mapping_channel, mapping_version)
 
     runs {
         // applies to all the run configs below
@@ -103,7 +104,7 @@ dependencies {
     // You can however also use the vanilla plugin (net.neoforged.gradle.vanilla) to use a version of Minecraft without the neoforge loader.
     // And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.
     // For all intends and purposes: You can treat this dependency as if it is a normal library you would use.
-    minecraft("net.minecraftforge:forge:${minecraft_version}-${forge_version}")
+    minecraft("net.minecraftforge:forge:${forge_version}")
 
     implementation("com.builtbroken.aiimprovements:AI-Improvements")
     implementation("de.srendi.advancedperipherals:AdvancedPeripherals")
@@ -170,7 +171,7 @@ dependencies {
     implementation(":easymagic/easymagic")
     implementation(":effectdescriptions")
     implementation(":embeddium")
-    implementation(":leavesbegone")
+    implementation(":leavesbegone/leavesbegone")
     implementation(":mapatlases-neoforge")
     implementation(":morered")
     implementation(":pickupnotifier/pickupnotifier")

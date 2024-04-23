@@ -88,3 +88,6 @@
 [submodule "visualworkbench"]
 	path = visualworkbench
 	url = https://github.com/Fuzss/visualworkbench.git
+[submodule "SuperMartijn642sCoreLib"]
+	path = SuperMartijn642sCoreLib
+	url = https://github.com/SuperMartijn642/SuperMartijn642sCoreLib.git
