@@ -1,104 +1,91 @@
 rootProject.name = "coding-lab-mega-modpack"
 
-pluginManagement {
-    repositories {
-        mavenLocal()
-        gradlePluginPortal()
-        maven("https://maven.minecraftforge.net/")
-        maven("https://maven.parchmentmc.org")
-        maven("https://repo.spongepowered.org/repository/maven-public/")
-    }
-}
-
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
 
-//includeBuild("AI-Improvements")
-//includeBuild("AdvancedPeripherals")
-//includeBuild("AppleSkin")
-//includeBuild("Bakery") {
-//    dependencySubstitution {
-//        substitute(module("satisfy:letsdo-bakery-forge")).using(project(":forge"))
-//    }
-//}
-//includeBuild("Balm")
-//includeBuild("Better-Burning")
-//includeBuild("BetterAdvancements")
-includeBuild("Big-Brain")
-//includeBuild("BoatItemView")
-// includeBuild("CC-Tweaked")
-// includeBuild("Candlelight")
-// includeBuild("Catalogue")
-// includeBuild("Clumps")
-// includeBuild("Controlling")
-// includeBuild("CrashUtilities")
-// includeBuild("Create")
-// includeBuild("CreateEnchantmentIndustry")
-// includeBuild("CreateInteriorsMod")
-// includeBuild("Curios")
-// includeBuild("Ding")
-//includeBuild("DoAPI") {
-//    dependencySubstitution {
-//        substitute(module("de.cristelknight:doapi")).using(project(":forge"))
-//    }
-//}
-// includeBuild("DurabilityTooltip")
-// includeBuild("DynamicLightsReforged")
-// includeBuild("EmbeddiumPlus")
-// includeBuild("Enchantment-Descriptions")
-// includeBuild("FarmersDelight")
-// includeBuild("FastPaintings")
-// includeBuild("Fastload")
-// includeBuild("FerriteCore")
-// includeBuild("Fusion")
-// includeBuild("GameMenuModOption")
-// includeBuild("GetItTogetherDrops")
-// includeBuild("ImmediatelyFast")
-// includeBuild("InfinityButtons")
-// includeBuild("KryptonReforged")
-// includeBuild("Meadow")
-// includeBuild("MemoryLeakFix")
-includeBuild("MixinTransmogrifier")
-// includeBuild("ModernFix")
-// includeBuild("Moonlight")
-// includeBuild("MouseTweaks")
-// includeBuild("NetherPortalFix")
-// includeBuild("Oceans_Delight")
-// includeBuild("Oculus")
-// includeBuild("Patchouli")
-// includeBuild("Piglin-Proliferation")
-// includeBuild("Railway")
-// includeBuild("Rechiseled")
-// includeBuild("RechiseledCreate")
-// includeBuild("SmarterFarmers")
-// includeBuild("SuggestionProviderFix")
-// includeBuild("TerraBlender")
-// includeBuild("WoodGood")
-// includeBuild("alternate-current")
-//includeBuild("architectury-api") {
-//    dependencySubstitution {
-//        substitute(module("dev.architectury:architectury-forge")).using(project(":forge"))
-//    }
-//}
-// includeBuild("betteranimationscollection/betteranimationscollection")
-// includeBuild("blockrunner/blockrunner")
-// includeBuild("cccbridge/forge")
-// includeBuild("cutthrough")
-// includeBuild("easyanvils/easyanvils")
-// includeBuild("easymagic/easymagic")
-// includeBuild("effectdescriptions")
-// includeBuild("embeddium")
-// includeBuild("leavesbegone/leavesbegone")
-// includeBuild("mapatlases-neoforge")
-// includeBuild("morered")
-// includeBuild("pickupnotifier/pickupnotifier")
-// includeBuild("radium-upstream")
-// includeBuild("right-click-harvest")
-// includeBuild("rrls")
-// includeBuild("rubidium-extra")
-// includeBuild("searchables")
-// includeBuild("spark")
-// includeBuild("spyglass-improvements")
-// includeBuild("textrues-embeddium-options")
-// includeBuild("visualworkbench/visualworkbench")
+val projects = arrayOf(
+    "AI-Improvements",
+    "AdvancedPeripherals",
+    "AppleSkin",
+    "Bakery",
+    "Balm",
+    "Better-Burning",
+    "BetterAdvancements",
+    "Big-Brain",
+    "BoatItemView",
+    "CC-Tweaked",
+    "Candlelight",
+    "Catalogue",
+    "Clumps",
+    "Controlling",
+    "CrashUtilities",
+    "Create",
+    "CreateEnchantmentIndustry",
+    "CreateInteriorsMod",
+    "Curios",
+    "Ding",
+    "DoAPI",
+    "DurabilityTooltip",
+    "DynamicLightsReforged",
+    "EmbeddiumPlus",
+    "Enchantment-Descriptions",
+    "FarmersDelight",
+    "FastPaintings",
+    "Fastload",
+    "FerriteCore",
+    "Fusion",
+    "GameMenuModOption",
+    "GetItTogetherDrops",
+    "ImmediatelyFast",
+    "InfinityButtons",
+    "JustEnoughBreeding",
+    "JustEnoughItems",
+    "KotlinForForge",
+    "KryptonReforged",
+    "Meadow",
+    "MemoryLeakFix",
+    "MixinTransmogrifier",
+    "ModernFix",
+    "Moonlight",
+    "MouseTweaks",
+    "NetherPortalFix",
+    "Oceans_Delight",
+    "Oculus",
+    "Patchouli",
+    "Piglin-Proliferation",
+    "Railway",
+    "Rechiseled",
+    "RechiseledCreate",
+    "SmarterFarmers",
+    "SuggestionProviderFix",
+    "SuperMartijn642sCoreLib",
+    "TerraBlender",
+    "WoodGood",
+    "alternate-current",
+    "architectury-api",
+    "betteranimationscollection/betteranimationscollection",
+    "blockrunner/blockrunner",
+    "cccbridge/forge",
+    "cutthrough/cutthrough",
+    "easyanvils/easyanvils",
+    "easymagic/easymagic",
+    "effectdescriptions/effectdescriptions",
+    "embeddium",
+    "leavesbegone/leavesbegone",
+    "mapatlases-neoforge",
+    "morered",
+    "pickupnotifier/pickupnotifier",
+    "radium-upstream",
+    "right-click-harvest",
+    "rrls",
+    "rubidium-extra",
+    "searchables",
+    "spark",
+    "spyglass-improvements",
+    "textrues-embeddium-options",
+    "visualworkbench/visualworkbench"
+)
+
+includeBuild("embeddium")
+// projects.forEach { project -> includeBuild(project) }

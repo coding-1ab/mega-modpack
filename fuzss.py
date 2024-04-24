@@ -20,6 +20,7 @@ targets =[
 "cutthrough",
 "easyanvils",
 "easymagic",
+"effectdescriptions",
 "leavesbegone",
 "pickupnotifier",
 "visualworkbench"

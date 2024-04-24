@@ -1,3 +1,9 @@
+[submodule "AdvancedPeripherals"]
+	path = AdvancedPeripherals
+	url = https://github.com/IntelligenceModding/AdvancedPeripherals.git
+[submodule "AppleSkin"]
+	path = AppleSkin
+	url = https://github.com/squeek502/AppleSkin.git
 [submodule "CC-Tweaked"]
 	path = CC-Tweaked
 	url = https://github.com/cc-tweaked/CC-Tweaked.git
@@ -97,3 +103,138 @@
 [submodule "MixinTransmogrifier"]
 	path = MixinTransmogrifier
 	url = https://github.com/Sinytra/MixinTransmogrifier.git
+[submodule "Bakery"]
+	path = Bakery
+	url = https://github.com/satisfyu/Bakery.git
+[submodule "Balm"]
+	path = Balm
+	url = https://github.com/Twelv
+[submodule "Better-Burning"]
+	path = Better-Burning
+	url = https://github.com/D
+[submodule "BetterAdvancements"]
+	path = BetterAdvancements
+	url = https://github.com
+[submodule "Big-Brain"]
+	path = Big-Brain
+	url = https://github.com/seymourimadeit
+[submodule "BoatItemView"]
+	path = BoatItemView
+	url = https://github.com/50ap5ud5/BoatItemView.git
+[submodule "Clumps"]
+	path = Clumps
+	url = https://github.com/jaredlll08/Clumps.git
+[submodule "Controlling"]
+	path = Controlling
+	url = https://github.com/jare
+[submodule "CrashUtilities"]
+	path = CrashUtilities
+	url = https://github.com/Darkere/CrashUtilities.git
+[submodule "Create"]
+	path = Create
+	url = https://github.com/Creators-of-Create/Create.git
+[submodule "CreateInteriorsMod"]
+	path = CreateInteriorsMod
+	url = https://github.com/aeseffici
+[submodule "Ding"]
+	path = Ding
+	url = https://github
+[submodule "DoAPI"]
+	path = DoAPI
+	url = https://github.com/Team-Let-s-Do/DoAPI.git
+[submodule "DurabilityTooltip"]
+	path = DurabilityTooltip
+	url = https://github.com/Su
+[submodule "DynamicLightsReforged"]
+	path = DynamicLightsReforged
+	url = https://git
+[submodule "EmbeddiumPlus"]
+	path = EmbeddiumPlus
+	url = https://github.com/SrRapero720/EmbeddiumPlus.git
+[submodule "Enchantment-Descriptions"]
+	path = Enchantment-Descriptions
+	url = https://github.com/D
+[submodule "FarmersDelight"]
+	path = FarmersDelight
+	url = https://github.com
+[submodule "Fastload"]
+	path = Fastload
+	url = https://github.com/BumbleSoftware/Fastload.git
+[submodule "FerriteCore"]
+	path = FerriteCore
+	url = https://github.com/malte0811/FerriteCore.git
+[submodule "Fusion"]
+	path = Fusion
+	url = https://github.com/Su
+[submodule "GameMenuModOption"]
+	path = GameMenuModOption
+	url = https://github.com/MORIMORI03
+[submodule "JustEnoughBreeding"]
+	path = JustEnoughBreeding
+	url = https://github.com/Christof
+[submodule "JustEnoughItems"]
+	path = JustEnoughItems
+	url = https://github.com/m
+[submodule "KotlinForForge"]
+	path = KotlinForForge
+	url = https://github.com/thedarkcol
+[submodule "KryptonReforged"]
+	path = KryptonReforged
+	url = https://git
+[submodule "MemoryLeakFix"]
+	path = MemoryLeakFix
+	url = https://github.c
+[submodule "ModernFix"]
+	path = ModernFix
+	url = https://github.com/embedd
+[submodule "MouseTweaks"]
+	path = MouseTweaks
+	url = https://github.com/YaLTeR/MouseTweaks.git
+[submodule "NetherPortalFix"]
+	path = NetherPortalFix
+	url = https://github.com/Twelv
+[submodule "Oceans_Delight"]
+	path = Oceans_Delight
+	url = https://github.com/Scoute
+[submodule "Oculus"]
+	path = Oculus
+	url = https://github.com/Asek3/Oculus.git
+[submodule "Patchouli"]
+	path = Patchouli
+	url = https://github.com/VazkiiMods/Patchouli.git
+[submodule "Railway"]
+	path = Railway
+	url = https://github.com/Layers-of-Railways/Railway.git
+[submodule "Rechiseled"]
+	path = Rechiseled
+	url = https://github.com/Su
+[submodule "RechiseledCreate"]
+	path = RechiseledCreate
+	url = https://github.com/Su
+[submodule "TerraBlender"]
+	path = TerraBlender
+	url = https://github.com/
+[submodule "WoodGood"]
+	path = WoodGood
+	url = https://github.com/MehVahdJukaar/WoodGood.git
+[submodule "embeddium"]
+	path = embeddium
+	url = https://github.com/embeddedt/embeddium.git
+[submodule "mapatlases-neoforge"]
+	path = mapatlases-neoforge
+	url = https://github.com/MehVahdJukaar/ma
+[submodule "right-click-harvest"]
+	path = right-click-harvest
+	url = https://github.com/Jam
+[submodule "rubidium-extra"]
+	path = rubidium-extra
+	url = https://github.co
+[submodule "spark"]
+	path = spark
+	url = https://github.com/lucko/spark.git
+[submodule "spyglass-improvements"]
+	path = spyglass-improvements
+	url = https://githu
+[submodule "textrues-embeddium-options"]
+	path = textrues-embeddium-options
+	url = https://githu
