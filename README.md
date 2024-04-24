@@ -4,8 +4,5 @@
 
 ```sh
 $ git clone --recursive https://github.com/coding-1ab/mega-modpack.git
-$ git apply versions_patch.patch
-$ python3 write.py
-$ python3 fuzss.py
-./gradlew 돌리면 끝
+./gradlew copyMods 돌리면 끝
 ```
