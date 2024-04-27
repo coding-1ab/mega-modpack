@@ -1,5 +1,5 @@
 # Coding lab 마인크래프트 서버 종합 패키지
-
+![2024-04-28_05 12 51](https://github.com/coding-1ab/mega-modpack/assets/41675181/3e4805ab-c244-4408-9b8f-4d2c0f9af1f7)
 ## 빌드 방법
 
 ### 필수 요건
