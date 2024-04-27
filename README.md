@@ -1,5 +1,10 @@
 # Coding lab 마인크래프트 서버 종합 패키지
+
 ![2024-04-28_05 12 51](https://github.com/coding-1ab/mega-modpack/assets/41675181/3e4805ab-c244-4408-9b8f-4d2c0f9af1f7)
+
+## 지원 마인크래프트 버전
+
+- [JAVA EDITION 1.20.1](https://www.minecraft.net/en-us/article/minecraft--java-edition-1-20-1)
 
 ## 빌드 최소 요건
 
